@@ -1,0 +1,180 @@
+/* =========================================
+   Gaya Global Proyek Sneat ARSIP
+   ========================================= */
+
+/* Menjaga Font Konsisten */
+body {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f9;
+    color: #697a8d;
+}
+
+/* Warna Primer */
+.text-primary { color: #696cff !important; }
+.bg-primary { background-color: #696cff !important; }
+
+/* Gaya Tombol */
+.btn-primary {
+    background-color: #696cff;
+    border-color: #696cff;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.bg-label-primary { 
+    background: #e7e7ff !important; 
+    color: #696cff !important; /* Tambahkan !important di sini */
+}
+
+.bg-label-info { 
+    background: #d7f5fc !important; 
+    color: #03c3ec !important; /* Tambahkan !important di sini */
+}
+.btn-primary:hover {
+    background-color: #5f61e6;
+    border-color: #5f61e6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px 0 rgba(105, 108, 255, 0.5);
+}
+
+.btn-outline-primary {
+    border-color: #696cff;
+    color: #696cff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #696cff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Gaya Kartu Dasar */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+}
+
+/* Sidebar (Khusus Dashboard) */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(161, 172, 184, 0.4);
+    z-index: 1000;
+}
+h4{
+    color: black;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 25px;
+}
+
+.nav-link {
+    color: #697a8d;
+    margin: 5px 15px;
+    border-radius: 0.375rem;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(105, 108, 255, 0.08);
+    color: #696cff;
+}
+
+.nav-link.active {
+    background-color: rgba(105, 108, 255, 0.16) !important;
+    color: #696cff !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   Perbaikan Halaman Indeks (Interaktif)
+   ========================================= */
+
+/* Hero Section */
+.hero-section {
+    /* Gradien latar belakang yang sangat halus */
+    background: linear-gradient(135deg, #f5f5f9 0%, #edf1f7 100%);
+    min-height: 80vh; /* Agar konten hero mengambil cukup ruang vertikal */
+}
+
+.hero-section h1.display-3 {
+    color:black;
+    font-size: 3.5rem; /* Sedikit lebih besar dan menonjol */
+}
+
+.hero-section p.lead {
+    font-size: 1.25rem; /* Lebih terbaca */
+}
+
+
+/* Tautan Seluruh Kartu Feature */
+.feature-card-link {
+    text-decoration: none;
+    color: inherit; /* Gunakan warna teks dasar kartu */
+    display: block; /* Agar seluruh kartu dapat diklik */
+}
+
+/* Gaya Kartu Feature */
+.feature-card {
+    transition: all 0.4s ease; /* Transisi halus untuk hover */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem; /* Sedikit lebih melengkung */
+}
+
+/* Gaya Kotak Ikon di Dalam Kartu */
+.feature-card .icon-box i {
+    color: #696cff; /* Warna primer */
+    transition: color 0.3s ease;
+}
+
+/* --- Efek Hover Kartu --- */
+.feature-card:hover {
+    /* Angkat kartu dan perkuat bayangan */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px 0 rgba(67, 89, 113, 0.18);
+}
+
+/* Ubah warna ikon saat kartu di-hover */
+.feature-card:hover .icon-box i {
+    color: #5558e6; /* Sedikit lebih gelap agar menonjol */
+}
+
+
+/* =========================================
+   Definisi Animasi Masuk (Fade-In Up)
+   ========================================= */
+
+/* Gaya Awal untuk Animasi */
+.animate-fade-in-up,
+.animate-fade-in-up-delay-1,
+.animate-fade-in-up-delay-2,
+.animate-fade-in-up-delay-3,
+.animate-fade-in-up-delay-4 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Penundaan (Delay) Animasi agar Teks Muncul Mengalir */
+.animate-fade-in-up-delay-1 { animation-delay: 0.2s; } /* Teks Deskripsi Hero */
+
+/* Penundaan untuk Kartu Feature agar Muncul Satu per Satu */
+.animate-fade-in-up-delay-2 { animation-delay: 0.4s; } /* Kartu 1 */
+.animate-fade-in-up-delay-3 { animation-delay: 0.6s; } /* Kartu 2 */
+.animate-fade-in-up-delay-4 { animation-delay: 0.8s; } /* Kartu 3 */
+
+
+/* Keyframes Animasi fadeUp */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
